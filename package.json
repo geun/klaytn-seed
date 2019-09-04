@@ -8,7 +8,10 @@
   "scripts": {
     "test": "truffle test",
     "compile": "truffle compile",
-    "console": "truffle console"
+    "console": "truffle console",
+    "migrate": "truffle migrate",
+    "migrate:reset": "truffle migrate --compile-all --reset"
+
   },
   "repository": {
     "type": "git",

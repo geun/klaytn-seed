@@ -22,7 +22,7 @@
 // const infuraKey = "fj4jll3k.....";
 //
 // const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
+const mnemonic = fs.readFileSync(".secret").toString().trim();
 const HDWalletProvider = require("truffle-hdwallet-provider-klaytn");
 
 module.exports = {
@@ -56,17 +56,17 @@ module.exports = {
 		},
 
 		baobab: {
-			provider: new HDWalletProvider(process.env.PRIVATE_KEY, 'https://api.baobab.klaytn.net:8651'),
-			network_id: 1001,
-			gas: '20000000',
-			gasPrice: null,
-		}
+			provider: () => new HDWalletProvider(privateKey, "https://api.baobab.klaytn.net:8651"),
+			network_id: '1001', //Klaytn baobab testnet's network id
+			gas: '8500000',
+			gasPrice: null
+		},
 
 		cypress: {
-			provider: new HDWalletProvider(process.env.PRIVATE_KEY, process.env.ENDPOINT),
-			network_id: 1001,
-			gas: '20000000',
-			gasPrice: null,
+			provider: () => new HDWalletProvider(privateKey, "https://api.cypress.klaytn.net:8651"),
+			network_id: '8217', //Klaytn mainnet's network id
+			gas: '8500000',
+			gasPrice: null
 		}
 
 		// Another network with more advanced options...
@@ -117,4 +117,4 @@ module.exports = {
 			// }
 		}
 	}
-}
+};
