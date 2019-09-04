@@ -664,7 +664,7 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
-caver-js@^1.0.0:
+caver-js@^1.0.0, caver-js@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/caver-js/-/caver-js-1.1.2.tgz#d1f293a60377043468232650715eefefbd5bb40c"
   integrity sha512-zqrpWl11N/2ATVv4EnS/MZHC7Je6P8OQ5yQaE1xiinnY0XBRS9zK3sDTUkfaWA+ejzog/O+D4pEwHRWe6xiOHg==
