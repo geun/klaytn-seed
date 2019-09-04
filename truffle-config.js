@@ -23,6 +23,7 @@
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
+const HDWalletProvider = require("truffle-hdwallet-provider-klaytn");
 
 module.exports = {
 	/**
@@ -48,8 +49,21 @@ module.exports = {
 			network_id: "*",       // Any network (default: none)
 		},
 
+		staging: {
+			host: "127.0.0.1",     // Localhost (default: none)
+			port: 8545,            // Standard Ethereum port (default: none)
+			network_id: "*",       // Any network (default: none)
+		},
+
 		baobab: {
 			provider: new HDWalletProvider(process.env.PRIVATE_KEY, 'https://api.baobab.klaytn.net:8651'),
+			network_id: 1001,
+			gas: '20000000',
+			gasPrice: null,
+		}
+
+		cypress: {
+			provider: new HDWalletProvider(process.env.PRIVATE_KEY, process.env.ENDPOINT),
 			network_id: 1001,
 			gas: '20000000',
 			gasPrice: null,
