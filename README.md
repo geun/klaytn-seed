@@ -1,6 +1,6 @@
 # klaytn Seed
 
-## how to use 
+## How to Install 
 
 ```
 yarn global add truffle
@@ -15,5 +15,13 @@ yarn test
 or
 ```
 truffle test
+```
+
+
+## Set Secret file to contain Private Key
+
+```
+touch .secret
+
 ```
 
