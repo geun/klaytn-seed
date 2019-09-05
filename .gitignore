@@ -65,5 +65,5 @@ storybook-static/
 .npmrc
 changed.json
 .secret
-contract.json
-abi.json
+
+artifacts/

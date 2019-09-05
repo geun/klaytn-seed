@@ -24,9 +24,11 @@
   "homepage": "https://github.com/geun/klaytn-seed#readme",
   "devDependencies": {
     "prettier": "^1.18.2",
-    "prettier-plugin-solidity": "^1.0.0-alpha.32"
+    "prettier-plugin-solidity": "^1.0.0-alpha.32",
+    "rimraf": "^3.0.0"
   },
   "dependencies": {
+    "@flui/klaytn-uploader": "latest",
     "@openzeppelin/contracts": "^2.3.0",
     "caver-js": "^1.1.2",
     "ipfs-http-client": "^34.0.0",
