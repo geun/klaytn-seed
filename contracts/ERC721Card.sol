@@ -21,4 +21,8 @@ contract ERC721Card is ERC721 {
 		cards.push(Card(name, 1));
 		_mint(account, cardId); // Mint a new card
 	}
+
+	function getCardCount() public view returns(uint count) {
+		return cards.length;
+	}
 }
