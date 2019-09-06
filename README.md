@@ -25,3 +25,10 @@ touch .secret
 
 ```
 
+## Set Env for azure storage
+
+```yml
+AZURE_STORAGE_ACCOUNT_NAME=
+AZURE_STORAGE_ACCOUNT_ACCESS_KEY=
+AZURE_STORAGE_CONTRACT_CONTAINER_NAME=
+```
