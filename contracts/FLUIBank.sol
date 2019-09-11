@@ -7,6 +7,7 @@ contract FLUIBank is Ownable {
 	bool private bankOpen = true;
 
 	modifier bankOpened() {
+		_;
 	}
 
 	function setBankState(bool _bankOpen) external onlyOwner {
@@ -22,5 +23,6 @@ contract FLUIBank is Ownable {
 	}
 
 	function getBalance(address _user) external view bankOpened returns (uint256) {
+		return 0;
 	}
 }
