@@ -2,7 +2,7 @@ pragma solidity ^0.5.6;
 
 import '@openzeppelin/contracts/ownership/Ownable.sol';
 
-contract FLUIBank is Ownable {
+contract FLUIBankStart is Ownable {
 
     function getBankState() public returns(bool state) {
         return false;
