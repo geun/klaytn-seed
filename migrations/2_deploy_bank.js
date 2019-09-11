@@ -32,8 +32,8 @@ module.exports = function(deployer) {
 				const [abiResult, addressResult] = results;
 
 				const envYaml = {
-					CONTRACT_ABI_JSON: abiResult.url.trim(),
-					CONTRACT_ADDRESS_JSON: addressResult.url.trim()
+					CONTRACT_ABI_JSON: encodeURIComponent(abiResult.url.trim()),
+					CONTRACT_ADDRESS_JSON: encodeURIComponent(addressResult.url.trim())
 				};
 
 				const doc = yaml.safeDump(envYaml, {
