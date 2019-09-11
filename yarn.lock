@@ -63,10 +63,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@flui/klaytn-uploader@latest":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@flui/klaytn-uploader/-/klaytn-uploader-0.1.5.tgz#e1b3b08f1de7a5caebe1f31ec75a369a10bd996c"
-  integrity sha512-5Pz6eecf5WIZTchMuu7HZJdOCCls2zFiJWP1pENwAiWdHQ9Y8HdmMy/092/wH15qGG58beEfllZjT9TBdpPyIg==
+"@flui/klaytn-uploader@*":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@flui/klaytn-uploader/-/klaytn-uploader-0.1.6.tgz#725b6c8200774bd5f43e4010ca552c722d31317d"
+  integrity sha512-g2gTzhBMAnHUWLNpidPVkCk8bLwAcWxHRMn8K4aoq82uBrj38poTMtnogJvVKdF6n5zw6CeO1ufo0Op+ZdcG+g==
   dependencies:
     "@azure/storage-blob" "^12.0.0-preview.2"
 
@@ -234,6 +234,13 @@ are-we-there-yet@~1.1.2:
   dependencies:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
+
+argparse@^1.0.7:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.10.tgz#bcd6791ea5ae09725e17e5ad988134cd40b3d911"
+  integrity sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
+  dependencies:
+    sprintf-js "~1.0.2"
 
 arr-diff@^4.0.0:
   version "4.0.0"
@@ -3147,6 +3154,14 @@ js-sha3@~0.8.0:
   resolved "https://registry.yarnpkg.com/js-sha3/-/js-sha3-0.8.0.tgz#b9b7a5da73afad7dedd0f8c463954cbde6818840"
   integrity sha512-gF1cRrHhIzNfToc802P800N8PpXS+evLLXfsVpowqmAFR9uwbi89WvXg2QspOmXL8QL86J4T1EpFu+yUkwJY3Q==
 
+js-yaml@^3.13.1:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
+  integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
+
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
@@ -5181,6 +5196,11 @@ split2@^3.1.0:
   integrity sha512-emNzr1s7ruq4N+1993yht631/JH+jaj0NYBosuKmLcq+JkGQ9MmTw1RB1fGaTCzUuseRIClrlSLHRNYGwWQ58Q==
   dependencies:
     readable-stream "^3.0.0"
+
+sprintf-js@~1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
+  integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sshpk@^1.7.0:
   version "1.16.1"
