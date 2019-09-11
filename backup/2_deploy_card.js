@@ -26,5 +26,6 @@ module.exports = function(deployer) {
 
 		const containerName = process.env.AZURE_STORAGE_CONTRACT_CONTAINER_NAME;
 		uploader.uploadArtifacts(FLUICard._json.contractName, 'artifacts', containerName);
+
 	});
 };

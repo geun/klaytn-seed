@@ -33,7 +33,9 @@
     "@flui/klaytn-uploader": "latest",
     "@openzeppelin/contracts": "^2.3.0",
     "caver-js": "^1.1.2",
+    "ethereum-input-data-decoder": "^0.2.0",
     "ipfs-http-client": "^34.0.0",
+    "node-fetch": "^2.6.0",
     "solc": "0.5.6",
     "truffle-hdwallet-provider-klaytn": "^1.0.13-a"
   },
