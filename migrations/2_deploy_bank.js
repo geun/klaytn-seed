@@ -37,7 +37,7 @@ module.exports = function(deployer) {
 				};
 
 				const doc = yaml.safeDump(envYaml, {
-					flowLevel: 0,
+					flowLevel: 1,
 					styles: {
 						'!!null': 'canonical' // dump null as ~
 					},
