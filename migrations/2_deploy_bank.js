@@ -38,13 +38,14 @@ module.exports = function(deployer) {
 
 				const doc = yaml.safeDump(envYaml, {
 					flowLevel: 1,
+					noCompatMode: true,
 					styles: {
 						'!!null': 'canonical' // dump null as ~
 					},
-					sortKeys: true // sort object keys
+					// sortKeys: true // sort object keys
 				});
 
-				fs.writeFileSync('./artifacts/.env.contract', doc);
+				fs.writeFileSync('./artifacts/.env.contract', doc.replace(/\: /g, '='));
 				console.log(`\n    Create file contract env file to yaml`);
 			});
 	});
