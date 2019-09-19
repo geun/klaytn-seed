@@ -67,3 +67,4 @@ changed.json
 .secret
 
 artifacts/
+build/

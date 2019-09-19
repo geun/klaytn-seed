@@ -21,9 +21,14 @@
 // const HDWalletProvider = require('truffle-hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
 //
-const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+const configPath = path.resolve(path.join(__dirname, `${process.env.CONTRACT_MODULE_PATH}/config.env`));
+require('dotenv').config({path: configPath});
+
+const fs = require('fs');
+const path = require('path');
+
+// const mnemonic = fs.readFileSync(".secret").toString().trim();
 const privateKey = fs.readFileSync(".secret").toString().trim();
 const HDWalletProvider = require("truffle-hdwallet-provider-klaytn");
 
@@ -38,6 +43,10 @@ module.exports = {
 	 * $ truffle test --network <network-name>
 	 */
 
+	artifacts_directory: path.join(__dirname, process.env.BASE_PATH, "./artifacts"),
+	contracts_build_directory: path.join(__dirname, process.env.BASE_PATH, "./build"),
+	migrations_directory: path.join(__dirname, process.env.BASE_PATH, "./migrations"),
+	contracts_directory: path.join(__dirname, process.env.BASE_PATH, "./contracts"),
 	networks: {
 		// Useful for testing. The `development` name is special - truffle uses it by default
 		// if it's defined here and no other network is specified at the command line.

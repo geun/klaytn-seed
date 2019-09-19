@@ -22,14 +22,14 @@
     "url": "https://github.com/geun/klaytn-seed/issues"
   },
   "homepage": "https://github.com/geun/klaytn-seed#readme",
-  "devDependencies": {
+  "dependencies": {
+    "truffle": "^5.0.36",
+    "dotenv": "^8.1.0",
     "prettier": "^1.18.2",
     "prettier-plugin-solidity": "^1.0.0-alpha.32",
     "rimraf": "^3.0.0",
     "typechain": "^0.3.20",
-    "typescript": "^3.6.2"
-  },
-  "dependencies": {
+    "typescript": "^3.6.2",
     "@flui/klaytn-uploader": "*",
     "@openzeppelin/contracts": "^2.3.0",
     "caver-js": "^1.1.2",
