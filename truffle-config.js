@@ -21,16 +21,17 @@
 // const HDWalletProvider = require('truffle-hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
 //
-
-const configPath = path.resolve(path.join(__dirname, `${process.env.CONTRACT_MODULE_PATH}/config.env`));
-require('dotenv').config({path: configPath});
-
 const fs = require('fs');
 const path = require('path');
 
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
+
 const privateKey = fs.readFileSync(".secret").toString().trim();
 const HDWalletProvider = require("truffle-hdwallet-provider-klaytn");
+
+const configPath = path.resolve(path.join(__dirname, `${process.env.CONTRACT_MODULE_PATH}/config.env`));
+require('dotenv').config({path: configPath});
+// console.log(config);
 
 module.exports = {
 	/**

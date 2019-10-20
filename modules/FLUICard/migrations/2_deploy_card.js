@@ -10,17 +10,19 @@ module.exports = function(deployer) {
 			contractAddress: FLUICard.address
 		});
 
-		const basePath = path.join(process.cwd(), process.env.BASE_PATH, './artifacts');
-		if (!fs.existsSync(basePath)) {
-			fs.mkdirSync(basePath);
+		const basePath = path.join(process.env.BASE_PATH, './artifacts');
+		const currentPath = path.join(process.cwd(), basePath);
+
+		if (!fs.existsSync(currentPath)) {
+			fs.mkdirSync(currentPath);
 			console.log(`\n    Create Artifacts`);
 		}
 
-		fs.writeFileSync(path.join(basePath, 'address.json'), data);
+		fs.writeFileSync(path.join(currentPath, './address.json'), data);
 		console.log(`\n    Create file of contract address to json: ${FLUICard.address}`);
 
 		const abi = JSON.stringify(FLUICard._json.abi);
-		fs.writeFileSync(path.join(basePath, 'abi.json'), abi);
+		fs.writeFileSync(path.join(currentPath, './abi.json'), abi);
 		console.log(`\n    Create file of abi file to json: ${FLUICard.address}`);
 
 		const accountName = process.env.AZURE_STORAGE_ACCOUNT_NAME;
@@ -29,7 +31,7 @@ module.exports = function(deployer) {
 
 		const containerName = process.env.AZURE_STORAGE_CONTRACT_CONTAINER_NAME;
 		uploader
-			.uploadArtifacts(FLUICard._json.contractName, 'artifacts', containerName)
+			.uploadArtifacts(FLUICard._json.contractName, basePath, containerName)
 			.then(results => {
 				const [abiResult, addressResult] = results;
 
@@ -47,7 +49,7 @@ module.exports = function(deployer) {
 					// sortKeys: true // sort object keys
 				});
 
-				fs.writeFileSync(path.join(basePath, '.env.contract'), doc.replace(/\: /g, '='));
+				fs.writeFileSync(path.join(currentPath, '.env.contract'), doc.replace(/\: /g, '='));
 				console.log(`\n    Create file contract env file to yaml`);
 			});
 	});
