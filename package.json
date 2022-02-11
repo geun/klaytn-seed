@@ -31,7 +31,7 @@
     "typechain": "^0.3.20",
     "typescript": "^3.6.2",
     "@flui/klaytn-uploader": "*",
-    "@openzeppelin/contracts": "^2.3.0",
+    "@openzeppelin/contracts": "^4.4.2",
     "caver-js": "^1.1.2",
     "ethereum-input-data-decoder": "^0.2.0",
     "ipfs-http-client": "^34.0.0",
